@@ -64,4 +64,14 @@ if ( opcionJugador === opcionComputadora ) {
   resultado = `🤝 ¡Empate! ambos eligieron ${opcionJugador}`;
 } else if ( opcionJugador === 'piedra' && opcionComputadora === 'tijera') {
   resultado = `🎉 ¡Ganaste! piedra vence a tijera.`;
-} 
+} else if ( opcionJugador === 'papel' && opcionComputadora === 'piedra') {
+  resultado = `🎉 ¡Ganaste! papel vence a piedra.`;
+} else if ( opcionJugador === 'tijera' && opcionComputadora === 'papel') {
+  resultado = `🎉 ¡Ganaste! tijera vence a papel.`;
+} else {
+  resultado = `😖 ¡Perdiste! La computadora te gano, lero lero!`;
+}
+
+// 6. Mostramos el resultado
+
+console.log(resultado);
