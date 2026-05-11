@@ -119,4 +119,78 @@ sumar(134823, 12987344);
 sumar(12, "Yat");
 
 
+/* 
 
+  Parámetros por defecto
+
+  En las funciones podemos tener valores por defecto si no se proporcionan los argumentos al llamar a la función.
+
+  Sintaxis:
+
+  function nombreFuncion( parm1 = valorDefault ) {
+    // Código que se ejecuta o cuerpa de la función.
+    ... 
+  }
+
+  Llamada:
+
+  nombreFuncion(); // Usará los valores por defecto.
+  nombreFuncion(arg1); // Usara el valor del argumento
+
+*/
+
+const multiplicar = function( num1 = 1, num2 = 2 ) {
+  let resultado = num1 * num2;
+  console.log(`El resultado de multiplicar ${num1} por ${num2} es: ${resultado}`);
+}
+
+multiplicar();
+multiplicar(5, 3);
+multiplicar(86, 324);
+
+/* 
+
+  Valor de Retorno (Return)
+
+  Las funciones pueden "devolver" o retornar un valor. Para esto se utiliza la palabra "return"
+
+  Sintaxis:
+
+  function nombreFunción() {
+    // Cuerpa de la función.
+    ...
+    ...
+    return valor;
+  }
+
+  Llamada:
+
+  const nombreConstante = nombreFuncion();
+
+*/
+
+function despedido( nombre = 'Yattito' ) {
+  return `${nombre} estas despedido! 😱`;
+}
+
+const mensajito = despedido();
+
+console.log(mensajito);
+
+/* 
+
+  Retorno Implícito
+
+  Las funciones flecha no necesitan la palabra return en su estructura más simple (una sola línea)
+
+  Sintaxis:
+
+  const nombreConstante = () => valor;
+
+*/
+
+const restar = (num1, num2) => num1 - num2;
+
+const resultado = restar(2, 75);
+
+console.log(resultado);
